@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "872634695983",
+    "firebase_url": "https://yuda-d2399.firebaseio.com",
+    "project_id": "yuda-d2399",
+    "storage_bucket": "yuda-d2399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872634695983:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872634695983-6erb1stjvvqmjk5gfq0d4ba0enbvdld0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "70860749f542d0bde9ff1ae1364f68aa266cf6f2"
+          }
+        },
+        {
+          "client_id": "872634695983-uhb0i3a9c7pbf0l81sv5gscmrle4r3q7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "500c9bcc441cbdcb47fbe41c59101b3b1333441e"
+          }
+        },
+        {
+          "client_id": "872634695983-1pp3rakq64tbhm95hej1426qedh7lke9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGUCR3vTk8dwwKHuDic5BiYXtjD7fVCbA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872634695983-1pp3rakq64tbhm95hej1426qedh7lke9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

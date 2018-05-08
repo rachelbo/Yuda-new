@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroud"
+    tools:context="com.example.myapplication.fragments.SearchFragment">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Type Here"
+            android:textSize="15sp"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:inputType="text"
+            android:lines="1"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/filter"
+            android:imeOptions="actionSearch">
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Search by name, tag, category..." />
+
+</LinearLayout>

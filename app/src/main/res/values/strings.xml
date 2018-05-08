@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Yuda</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_1">Home</string>
+    <string name="menu_2">Profile</string>
+    <string name="menu_3">Chat</string>
+    <string name="menu_4">Sales &amp; Benefits</string>
+    <string name="menu_5">Public transport</string>
+    <string name="menu_6">Move to day market</string>
+    <string name="menu_7">Business Proprietors</string>
+    <string name="menu_8">About</string>
+    <string name="menu_9">Contact Us</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GET STARTED</string>
+
+    <string name="slide_1_title">Marketplace</string>
+    <string name="slide_1_desc">Find stores in the market</string>
+
+    <string name="slide_2_title">Parking</string>
+    <string name="slide_2_desc">Find parking near the market</string>
+
+    <string name="slide_3_title">Personal Profile</string>
+    <string name="slide_3_desc">Add photos and chat with other people</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
