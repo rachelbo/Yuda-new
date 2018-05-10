@@ -130,7 +130,7 @@ public class MainFragment extends Fragment {
                             String menu = jobj.getString("menu");
                             String phone = jobj.getString("phone");
                             String tags = jobj.getString("tags");
-                            String website = jobj.getString("phone");
+                            String website = jobj.getString("website");
                             String lat = jobj.getString("lat");
                             String longitude = jobj.getString("longitude");
                             SearchModel myModel = new SearchModel(image,name,address,atmosphere,average_price,class_shop,hours,menu,phone,tags,website, lat, longitude);
