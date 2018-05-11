@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#89abe3</color>
-    <color name="colorPrimaryDark">#7d9dd0</color>
+    <color name="colorPrimaryDark">#7390bf</color>
     <color name="colorAccent">#ee9e95</color>
     <color name="white">#ffffff</color>
-    <color name="background">#ffffff</color>
+    <color name="background">#feffdf</color>
 
-    <color name="bg_screen1">#ffffd6</color>
-    <color name="bg_screen2">#ffffd6</color>
-    <color name="bg_screen3">#ffffd6</color>
-    <color name="bg_screen4">#ffffd6</color>
+    <color name="bg_screen1">#ee9e95</color>
+    <color name="bg_screen2">#ee9e95</color>
+    <color name="bg_screen3">#ee9e95</color>
+    <color name="bg_screen4">#ee9e95</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#7fa3a3</color>
