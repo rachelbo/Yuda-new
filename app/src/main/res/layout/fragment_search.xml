@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/backgroud"
+    android:background="@color/bg_screen1"
     tools:context="com.example.myapplication.fragments.SearchFragment">
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
+        android:background="@color/bg_screen1"
         android:layout_height="wrap_content">
         <EditText
             android:id="@+id/searchView"

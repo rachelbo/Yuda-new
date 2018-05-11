@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ccc"
+        android:background="@color/bg_screen1"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
         <me.zhanghai.android.materialprogressbar.MaterialProgressBar

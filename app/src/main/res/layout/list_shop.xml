@@ -21,7 +21,7 @@
                     android:layout_height="100dp"
                     android:cropToPadding="true"
                     android:scaleType="centerCrop"
-                    android:background="@color/colorPrimaryDark"/>
+                    android:background="@color/white"/>
             </RelativeLayout>
         </LinearLayout>
         <LinearLayout
