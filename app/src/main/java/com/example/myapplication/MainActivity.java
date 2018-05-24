@@ -117,6 +117,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_main) {
             fragmentClass = HomeFragment.class;
         }
+        if (id == R.id.nav_search) {
+            fragmentClass = MainFragment.class;
+        }
         else if (id == R.id.nav_profile) {
             fragmentClass = ProfileFragment.class;
         }
