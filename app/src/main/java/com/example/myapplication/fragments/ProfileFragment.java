@@ -26,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.myapplication.InboxActivity;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.app.AppConfig;
 import com.example.myapplication.app.AppController;
@@ -221,7 +222,7 @@ public class ProfileFragment extends Fragment {
         alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setView(promptsView);
         alertDialogH = alertDialogBuilder.create();
-        alertDialogH.setCancelable(false);
+        alertDialogH.setCancelable(true);
 
         send_message.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -253,7 +254,19 @@ public class ProfileFragment extends Fragment {
 
             @Override
             public void onResponse(String response) {
-                session.setImage(session.getUsername()+".jpg");
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    int success = jObj.getInt("success");
+                    String image_name = jObj.getString("image_name");
+                    if (success == 1) {
+                        session.setImage(image_name+".jpg");
+                        Intent intent = new Intent(getContext(), MainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
 

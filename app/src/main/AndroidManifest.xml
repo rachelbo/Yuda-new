@@ -31,14 +31,14 @@
             android:label="Activity"
             android:theme="@style/AppTheme" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".SearchResultActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".ShopDetailActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".InboxListActivity" />
         <activity android:name=".InboxActivity" />
-        <activity android:name=".GroupChatActivity"></activity>
+        <activity android:name=".GroupChatActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

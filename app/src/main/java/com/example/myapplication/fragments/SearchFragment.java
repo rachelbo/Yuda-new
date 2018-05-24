@@ -257,8 +257,6 @@ public class SearchFragment extends Fragment {
                 address = v.findViewById(R.id.address);
                 imageView = v.findViewById(R.id.imageView);
                 v.setOnClickListener(this);
-
-
             }
 
             @Override

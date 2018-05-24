@@ -21,6 +21,7 @@ import com.example.myapplication.app.AppConfig;
 import com.example.myapplication.app.SessionManager;
 import com.example.myapplication.fragments.BlankFragment;
 import com.example.myapplication.fragments.ChatFragment;
+import com.example.myapplication.fragments.HomeFragment;
 import com.example.myapplication.fragments.MainFragment;
 import com.example.myapplication.fragments.ProfileFragment;
 import com.example.myapplication.fragments.SearchFragment;
@@ -40,11 +41,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         session = new SessionManager(getApplicationContext());
 
-        fragmentClass = MainFragment.class;
+        fragmentClass = HomeFragment.class;
         title="Home";
         try {
             fragment = (Fragment) fragmentClass.newInstance();
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .commit();
         setTitle(title);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -90,60 +91,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Picasso.with(getApplicationContext()).load(AppConfig.URL_IMAGE+session.getImage()).into(imageView);
         name=headerLayout.findViewById(R.id.name);
         name.setText("Welcome "+session.getName());
-        moveMe = findViewById(R.id.moveMe);
-        if(session.getMarket_Open().equals("all")){
-            moveMe.setText("Open now");
-        }
-        else {
-            moveMe.setText("Show all");
-        }
 
-        moveMe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(session.getMarket_Open().equals("all")){
-                    session.setMarket_Open("open");
-                }
-                else {
-                    session.setMarket_Open("all");
-                }
-                Intent i = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
 
         searchView = findViewById(R.id.searchView);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Bundle bundle = new Bundle();
-                bundle.putString("query",query);
-
-                fragmentClass = SearchFragment.class;
-                try {
-                    fragment = (Fragment) fragmentClass.newInstance();
-                    fragment.setArguments(bundle);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                if (fragment != null) {
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.flContent, fragment)
-                            .commit();
-                    setTitle(query);
-                    fragment = null;
-                }
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
+        searchView.setVisibility(View.GONE);
+        moveMe = findViewById(R.id.moveMe);
+        moveMe.setVisibility(View.GONE);
     }
 
     @Override
@@ -162,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
-            fragmentClass = MainFragment.class;
+            fragmentClass = HomeFragment.class;
         }
         else if (id == R.id.nav_profile) {
             fragmentClass = ProfileFragment.class;

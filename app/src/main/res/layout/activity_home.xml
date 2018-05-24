@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context="com.example.myapplication.HomeActivity">
-
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="353dp"
@@ -18,13 +21,6 @@
         android:layout_marginBottom="-16dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/background_pic" />
-
-
-
-    <include
-        layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/buttonNight4"

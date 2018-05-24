@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import android.*;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
@@ -27,11 +29,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
 
 public class ShopDetailActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private TextView brand_txview,atmospherev,average_pricev,classv,hoursv,menuv,phonev,tagsv,websitev;
+    private TextView brand_txview,atmospherev,average_pricev,classv,hoursv,phonev,tagsv,websitev;
     private  Bundle extras;
     private String name,image,address,atmosphere,average_price,classs,hours,menus,phone,tags,website,lat,longitude;
     GoogleMap mGoogleMap;
-    private ImageView imageView;
+    private ImageView imageView,menuv;
     MapFragment mapFrag;
     GoogleApiClient mGoogleApiClient;
     private CollapsingToolbarLayout collapsingToolbarLayout = null;
@@ -86,14 +88,30 @@ public class ShopDetailActivity extends AppCompatActivity implements OnMapReadyC
         tagsv = findViewById(R.id.tagsv);
         websitev = findViewById(R.id.websitev);
         imageView = findViewById(R.id.imageView);
-        Picasso.with(getApplicationContext()).load(image).into(imageView);
+
+        try{
+            Picasso.with(getApplicationContext()).load(image).into(imageView);
+        }
+        catch (Exception e){
+            
+        }
+
+
+        websitev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(website));
+                startActivity(intent);
+            }
+        });
 
         brand_txview.setText(name);
         atmospherev.setText(atmosphere);
         average_pricev.setText(average_price);
         classv.setText(classs);
         hoursv.setText(hours);
-        menuv.setText(menus);
+        Picasso.with(getApplicationContext()).load(menus).into(menuv);
         phonev.setText(phone);
         tagsv.setText(tags);
         websitev.setText(website);
