@@ -12,8 +12,8 @@ import com.example.myapplication.app.SessionManager;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView textView;
-    private Button buttonNight,buttonDay;
-    private Intent intent;
+    //private Button buttonNight,buttonDay;
+    private Intent search_intent;
     private SessionManager session;
 
     @Override
@@ -25,31 +25,26 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         initialize();
 
-        intent = new Intent(getApplicationContext(), MainActivity.class);
+        search_intent = new Intent(getApplicationContext(), MainActivity.class);
         textView.setText("Welcome to Yuda");
         session = new SessionManager(getApplicationContext());
     }
 
     private void initialize(){
-        buttonNight = findViewById(R.id.buttonNight);
-        buttonNight.setOnClickListener(this);
+        //buttonNight = findViewById(R.id.buttonNight);
+        //buttonNight.setOnClickListener(this);
         // DISPLAY THIS BUTTON??????????
-        buttonDay= findViewById(R.id.buttonDay);
-        buttonDay.setOnClickListener(this);
+        //buttonDay= findViewById(R.id.buttonDay);
+        //buttonDay.setOnClickListener(this);
         textView = findViewById(R.id.toolbar_title);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.buttonNight:
+            case R.id.search_icon:
                 session.setMarket_Table("night");
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.buttonDay:
-                session.setMarket_Table("day");
-                startActivity(intent);
+                startActivity(search_intent);
                 finish();
                 break;
         }

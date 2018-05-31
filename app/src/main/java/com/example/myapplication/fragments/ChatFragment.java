@@ -48,4 +48,10 @@ public class ChatFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("Chat");
+    }
+
 }

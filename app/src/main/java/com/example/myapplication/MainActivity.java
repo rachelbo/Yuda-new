@@ -138,9 +138,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.nav_about) {
             fragmentClass = BlankFragment.class;
         }
-        else if (id == R.id.nav_contact) {
-            fragmentClass = BlankFragment.class;
-        }
         else if (id == R.id.nav_log_out) {
             fragmentClass = BlankFragment.class;
             session.setLogin(false);

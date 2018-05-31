@@ -288,4 +288,10 @@ public class ProfileFragment extends Fragment {
         AppController.getInstance().addToRequestQueue(uploadImage);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("Profile");
+    }
+
 }
