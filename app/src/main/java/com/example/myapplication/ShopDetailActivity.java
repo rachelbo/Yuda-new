@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.*;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -87,7 +86,7 @@ public class ShopDetailActivity extends AppCompatActivity implements OnMapReadyC
         phonev = findViewById(R.id.phonev);
         tagsv = findViewById(R.id.tagsv);
         websitev = findViewById(R.id.websitev);
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.ImageView);
 
         try{
             Picasso.with(getApplicationContext()).load(image).into(imageView);

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -269,7 +268,7 @@ public class MainFragment extends Fragment {
                 average_priceV = v.findViewById(R.id.average_priceV);
                 hours = v.findViewById(R.id.hours);
                 address = v.findViewById(R.id.address);
-                imageView = v.findViewById(R.id.imageView);
+                imageView = v.findViewById(R.id.ImageView);
                 v.setOnClickListener(this);
 
 

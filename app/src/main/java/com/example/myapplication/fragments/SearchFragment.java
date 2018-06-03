@@ -255,7 +255,7 @@ public class SearchFragment extends Fragment {
                 average_priceV = v.findViewById(R.id.average_priceV);
                 hours = v.findViewById(R.id.hours);
                 address = v.findViewById(R.id.address);
-                imageView = v.findViewById(R.id.imageView);
+                imageView = v.findViewById(R.id.ImageView);
                 v.setOnClickListener(this);
             }
 

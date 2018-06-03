@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.SearchActivity;
@@ -68,7 +67,7 @@ public class HomeFragment extends Fragment {
         transport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BlankFragment nextFrag= new BlankFragment();
+                TransportFragment nextFrag= new TransportFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(getId(), nextFrag,"findThisFragment")
                         .addToBackStack(null)

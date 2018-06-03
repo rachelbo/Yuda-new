@@ -10,7 +10,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +23,7 @@ import com.example.myapplication.fragments.ChatFragment;
 import com.example.myapplication.fragments.HomeFragment;
 import com.example.myapplication.fragments.MainFragment;
 import com.example.myapplication.fragments.ProfileFragment;
-import com.example.myapplication.fragments.SearchFragment;
+import com.example.myapplication.fragments.TransportFragment;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -87,11 +86,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         View headerLayout=navigationView.getHeaderView(0);
-        imageView=headerLayout.findViewById(R.id.imageView);
+        imageView=headerLayout.findViewById(R.id.ImageView);
+
         Picasso.with(getApplicationContext()).load(AppConfig.URL_IMAGE+session.getImage()).into(imageView);
         name=headerLayout.findViewById(R.id.name);
         name.setText("Welcome "+session.getName());
-
 
         searchView = findViewById(R.id.searchView);
         searchView.setVisibility(View.GONE);
@@ -130,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentClass = BlankFragment.class;
         }
         else if (id == R.id.nav_public) {
-            fragmentClass = BlankFragment.class;
+            fragmentClass = TransportFragment.class;
         }
         else if (id == R.id.nav_business) {
             fragmentClass = BlankFragment.class;

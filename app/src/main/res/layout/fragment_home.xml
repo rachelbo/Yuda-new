@@ -69,5 +69,14 @@
         android:layout_alignTop="@+id/transport_icon"
         android:background="@drawable/profile_icon"/>
 
+    <ImageView
+        android:id="@+id/market_circle"
+        android:layout_width="307dp"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="111dp"
+        app:srcCompat="@drawable/market_circle" />
+
 
 </RelativeLayout>
