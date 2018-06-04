@@ -38,13 +38,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
+                android:layout_toLeftOf="@+id/chatSendButton"
                 android:layout_weight="1"
-                android:hint="Enter message"
+                android:background="@color/white"
+                android:hint="You can send ONLY one message in 5 minuts"
                 android:inputType="textMultiLine"
                 android:maxLines="5"
                 android:padding="10dp"
-                android:background="@color/white"
-                android:layout_toLeftOf="@+id/chatSendButton"
                 android:scrollHorizontally="false" />
 
             <Button

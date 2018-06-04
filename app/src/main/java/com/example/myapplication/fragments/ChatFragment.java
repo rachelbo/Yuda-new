@@ -2,6 +2,7 @@ package com.example.myapplication.fragments;
 
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ public class ChatFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
         privateMessage = rootView.findViewById(R.id.privateMessage);
         group = rootView.findViewById(R.id.group);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         privateMessage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,7 @@
 package com.example.myapplication.fragments;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -58,7 +59,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         query= getArguments().getString("query");
-
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         recyclerView =rootView.findViewById(R.id.recyclerView);
         indeterminate_progress = rootView.findViewById(R.id.indeterminate_progress);
         recyclerView.setHasFixedSize(false);

@@ -18,11 +18,14 @@ import android.widget.TextView;
 
 import com.example.myapplication.app.AppConfig;
 import com.example.myapplication.app.SessionManager;
+import com.example.myapplication.fragments.AboutFragment;
 import com.example.myapplication.fragments.BlankFragment;
+import com.example.myapplication.fragments.BusinessOwnerFragment;
 import com.example.myapplication.fragments.ChatFragment;
 import com.example.myapplication.fragments.HomeFragment;
 import com.example.myapplication.fragments.MainFragment;
 import com.example.myapplication.fragments.ProfileFragment;
+import com.example.myapplication.fragments.SalesBenefitsFragment;
 import com.example.myapplication.fragments.TransportFragment;
 import com.squareup.picasso.Picasso;
 
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View headerLayout=navigationView.getHeaderView(0);
         imageView=headerLayout.findViewById(R.id.ImageView);
 
+
         Picasso.with(getApplicationContext()).load(AppConfig.URL_IMAGE+session.getImage()).into(imageView);
         name=headerLayout.findViewById(R.id.name);
         name.setText("Welcome "+session.getName());
@@ -126,16 +130,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentClass = ChatFragment.class;
         }
         else if (id == R.id.nav_sales) {
-            fragmentClass = BlankFragment.class;
+            fragmentClass = SalesBenefitsFragment.class;
         }
         else if (id == R.id.nav_public) {
             fragmentClass = TransportFragment.class;
         }
         else if (id == R.id.nav_business) {
-            fragmentClass = BlankFragment.class;
+            fragmentClass = BusinessOwnerFragment.class;
         }
         else if (id == R.id.nav_about) {
-            fragmentClass = BlankFragment.class;
+            fragmentClass = AboutFragment.class;
         }
         else if (id == R.id.nav_log_out) {
             fragmentClass = BlankFragment.class;

@@ -1,5 +1,6 @@
 package com.example.myapplication.fragments;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,6 +27,8 @@ public class TransportFragment extends Fragment {
         mTextView1.setText(R.string.public_trans);
         mTextView2.setText(R.string.parking);
         // Inflate the layout for this fragment
+
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         return rootView;
     }
 

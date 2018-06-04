@@ -98,32 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:padding="5dp"
-                    android:background="@drawable/border"
-                    android:layout_weight="1">
-                    <TextView
-                        android:id="@+id/address_head"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Market Type:"/>
-                    <TextView
-                        android:id="@+id/type"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_below="@+id/address_head"
-                        android:typeface="normal"
-                        android:text="night"
-                        android:textSize="14sp" />
-                </RelativeLayout>
-            </LinearLayout>
+                android:orientation="horizontal"></LinearLayout>
         </LinearLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

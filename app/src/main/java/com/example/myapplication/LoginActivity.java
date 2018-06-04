@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                         session.setImage(image);
                         session.setLogin(true);
 
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }

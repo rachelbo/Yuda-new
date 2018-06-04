@@ -2,6 +2,7 @@ package com.example.myapplication.fragments;
 
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -31,6 +32,7 @@ public class HomeFragment extends Fragment {
         chat = rootView.findViewById(R.id.chat_icon);
         profile = rootView.findViewById(R.id.profile_icon);
         transport = rootView.findViewById(R.id.transport_icon);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override

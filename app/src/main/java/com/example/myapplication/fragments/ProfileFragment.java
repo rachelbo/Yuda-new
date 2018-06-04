@@ -49,7 +49,7 @@ import static android.app.Activity.RESULT_OK;
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
-    private TextView user,name,email_main,type;
+    private TextView user,name,email_main;
     private SessionManager session;
     private EditText searchView;
     private ProgressDialog progressDialog;
@@ -76,7 +76,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         user = rootView.findViewById(R.id.user);
-        type = rootView.findViewById(R.id.type);
         name = rootView.findViewById(R.id.name);
         circleView = rootView.findViewById(R.id.circleView);
         email_main = rootView.findViewById(R.id.email_main);
@@ -92,7 +91,6 @@ public class ProfileFragment extends Fragment {
         session = new SessionManager(getContext());
 
         user.setText(session.getUsername());
-        type.setText(session.getMarket_Table());
         name.setText(session.getName());
         email_main.setText(session.getEmail());
 
