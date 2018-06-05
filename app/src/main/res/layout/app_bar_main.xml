@@ -24,8 +24,12 @@
                 app:queryHint="Enter your search query"
                 android:layout_gravity="right">
 
+
             </android.support.v7.widget.SearchView>
+
         </android.support.v7.widget.Toolbar>
+
+
 
     </android.support.design.widget.AppBarLayout>
 

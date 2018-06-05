@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Class fragmentClass;
     CharSequence title=null;
     private SearchView searchView;
-    private ImageView imageView;
+    private ImageView imageView, info_button;
     private TextView name;
     private SessionManager session;
     private Button moveMe;
@@ -100,6 +100,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         searchView.setVisibility(View.GONE);
         moveMe = findViewById(R.id.moveMe);
         moveMe.setVisibility(View.GONE);
+        info_button = findViewById(R.id.information_button);
+        info_button.setVisibility(View.GONE);
+
     }
 
     @Override

@@ -37,4 +37,11 @@
         or if you have noticed some problems, please contact us: yudapplication@gmail.com</string>
     <string name="business_owner">If you wish do add your business page to the application, or you wish to add some
     changes to an existing page, please contact us: yudapplication@gmail.com</string>
+    <string name="categories">You can search by categories.\nSimply enter one of the options:\n\n
+        <li>Bar</li>\n
+        <li>Restaurant</li>\n
+        <li>Food stall</li>\n
+        <li>Chill out</li>\n
+        <li>Loud music</li>\n
+        <li>Food stall</li></string>
 </resources>

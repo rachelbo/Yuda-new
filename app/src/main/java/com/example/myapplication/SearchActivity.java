@@ -7,6 +7,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -34,9 +35,12 @@ public class SearchActivity extends AppCompatActivity {
     private SearchView searchView;
     private SessionManager session;
     private Button moveMe;
-
+    private ImageView info;
+    private AlertDialog.Builder alertDialogBuilder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -45,6 +49,7 @@ public class SearchActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         session = new SessionManager(getApplicationContext());
 
+        alertDialogBuilder = new AlertDialog.Builder(this);
         fragmentClass = MainFragment.class;
         title="Home";
         try {
@@ -58,6 +63,17 @@ public class SearchActivity extends AppCompatActivity {
                 .commit();
         setTitle(title);
 
+        info = findViewById(R.id.information_button);
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialogBuilder.setCancelable(true);
+                alertDialogBuilder.setTitle("Categories menu");
+                alertDialogBuilder.setMessage(R.string.categories);
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        });
 
         moveMe = findViewById(R.id.moveMe);
         if(session.getMarket_Open().equals("all")){
