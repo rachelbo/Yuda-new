@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -37,6 +38,7 @@ public class SearchActivity extends AppCompatActivity {
     private Button moveMe;
     private ImageView info;
     private AlertDialog.Builder alertDialogBuilder;
+    private String[] Choices = new String[]{"• Bar", "• Restaurant", "• Food stall", "• Chill out", "• Loud music"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -68,10 +70,22 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 alertDialogBuilder.setCancelable(true);
-                alertDialogBuilder.setTitle("Categories menu");
-                alertDialogBuilder.setMessage(R.string.categories);
+                //alertDialogBuilder.setTitle("Categories menu");
+                alertDialogBuilder.setTitle(R.string.categories_title);
+                alertDialogBuilder.setItems(Choices, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // The 'which' argument contains the index position
+                        // of the selected item
+                    }
+                });
+                alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
+
             }
         });
 

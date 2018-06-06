@@ -44,4 +44,5 @@
         <li>Chill out</li>\n
         <li>Loud music</li>\n
         <li>Food stall</li></string>
+    <string name="categories_title">You can search by categories.\nSimply enter one of the options:</string>
 </resources>

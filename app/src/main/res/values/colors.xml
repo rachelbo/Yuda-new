@@ -4,11 +4,12 @@
     <color name="colorPrimaryDark">#7390bf</color>
     <color name="colorAccent">#ee9e95</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="background">#ffebe3</color>
 
     <color name="bg_screen1">#ffebe3</color>
-    <color name="bg_screen2">#ffebe3</color>
-    <color name="bg_screen3">#ffebe3</color>
+    <color name="bg_screen2">#ffa0ac</color>
+    <color name="bg_screen3">#d46374</color>
     <color name="bg_screen4">#ffebe3</color>
 
     <!-- dots inactive colors -->
