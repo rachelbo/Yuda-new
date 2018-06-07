@@ -93,6 +93,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         Picasso.with(getApplicationContext()).load(AppConfig.URL_IMAGE+session.getImage()).into(imageView);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentClass = ProfileFragment.class;
+                try {
+                    fragment = (Fragment) fragmentClass.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                DrawerLayout drawer = findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+            }
+        });
+
         name=headerLayout.findViewById(R.id.name);
         name.setText("Welcome "+session.getName());
 
@@ -124,7 +141,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentClass = HomeFragment.class;
         }
         if (id == R.id.nav_search) {
-            fragmentClass = MainFragment.class;
+            Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_profile) {
             fragmentClass = ProfileFragment.class;
